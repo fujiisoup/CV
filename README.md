@@ -1,5 +1,7 @@
 # Keisuke Fujii
 
+<img src='figs/face_maldives.jpg' width=240pt>
+
 [Japanese version](jp/CV.md)
 
 ### Current position

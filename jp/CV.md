@@ -1,5 +1,7 @@
 # Keisuke Fujii
 
+<img src='../figs/face_maldives.jpg' width=240pt>
+
 [English version](../README.md)
 
 ### 現在の職
@@ -9,7 +11,7 @@
 博士（工学）（京都大学）
 
 <!-- TODO translate in JP -->
-[**経歴の詳細**](work_education.md)
+[**経歴の詳細**](../work_education.md)
 
 ### 住所
 615-8540  
