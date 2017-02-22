@@ -52,6 +52,17 @@ https://www-amdis.iaea.org/meetings/UQ2016/
 
 [**Full list of talks at domestic conferences**](https://kyouindb.iimc.kyoto-u.ac.jp/e/hR3uG)
 
+
+### Lectures
+I teach the following cources in Kyoto university.
+
++ Practice of Basic Informatics(Faculty of Engineering)  
+  [Web site for this cource (especially for programming)](http://python-textbook.readthedocs.io/)
++ Mechanical and System Engineering Laboratory 2
+
+
+
+
 ### Softwares
 I am a founded developer of the following softwares for my study.
 + [**Henbun**](https://github.com/fujii-team/Henbun)  

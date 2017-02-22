@@ -68,6 +68,15 @@ https://www-amdis.iaea.org/meetings/UQ2016/
 
 [**国内会議発表のリスト**](https://kyouindb.iimc.kyoto-u.ac.jp/e/hR3uG)
 
+
+### 講義
+京都大学で以下の講義を担当しています。
+
++ 情報基礎演習［工学部］
+  [教科書のウェブサイト](http://python-textbook.readthedocs.io/)
++ 機会システム学実験2
+
+
 ### ソフトウェア
 
 上記研究活動に用いるため、いくつかのソフトウェアを開発しています。
