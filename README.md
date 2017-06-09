@@ -42,10 +42,12 @@ found that this tails originate from the high temperature (a few keV) neutral hy
 
 
 ### Recent talks
-Bayesian Inference for the LHD Experiment Data  
-*IAEA Technical Meeting on Uncertainty Assessment and Benchmark Experiments for Atomic and Molecular Data for Fusion Applications (19-21 December 2016, IAEA Headquarters, Vienna, Austria)*
+Machine Learning of Noise in LHD Thomson Scattering System
 
-https://www-amdis.iaea.org/meetings/UQ2016/
+[2nd IAEA Technical Meeting on the
+Fusion Data Processing, Validation and Analysis
+(30 May - 2 June 2017 Boston, USA)](https://nucleus.iaea.org/sites/fusionportal/Pages/2nd%20TM%20on%20Fusion%20Data%20processing/General-Information.aspx)
+
 
 
 [**Full list of talks at international conferences**](talks.md)
@@ -56,17 +58,19 @@ https://www-amdis.iaea.org/meetings/UQ2016/
 ### Lectures
 I teach the following cources in Kyoto university.
 
-+ Practice of Basic Informatics(Faculty of Engineering)  
++ Practice of Basic Informatics (Faculty of Engineering)  
+  The textbook for this lecture is in
   [Web site for this cource (especially for programming)](http://python-textbook.readthedocs.io/)
 + Mechanical and System Engineering Laboratory 2
-
-
 
 
 ### Softwares
 I am a founded developer of the following softwares for my study.
 + [**Henbun**](https://github.com/fujii-team/Henbun)  
 Variational Bayesian inference for big data.
+
++ [**sif_reader**](https://github.com/fujii-team/sif_reader)  
+A small Python library for reading Andor sif format.
 
 + [**PyLHD**](https://github.com/fujii-team/PyLHD)  
 A Python library for the LHD experiments
@@ -76,3 +80,6 @@ I have contributed to the following open source softwares.
 
 + [**GPflow**](https://github.com/GPflow/GPflow)  
 Gaussian processes in TensorFlow
+
++ [**xarray**](https://github.com/pydata/xarray)  
+N-D labeled arrays and datasets in Python http://xarray.pydata.org
