@@ -66,20 +66,20 @@ I teach the following cources in Kyoto university.
 
 ### Softwares
 I am a founded developer of the following softwares for my study.
-+ [**Henbun**](https://github.com/fujii-team/Henbun)  
-Variational Bayesian inference for big data.
++ [**py3nj**](https://github.com/fujiisoup/py3nj)  
+Wigner's 3J, 6J, 9J symbols for python
 
 + [**sif_reader**](https://github.com/fujii-team/sif_reader)  
 A small Python library for reading Andor sif format.
+
++ [**xr-scipy**](https://github.com/fujiisoup/scipy)  
+Thin scipy wrapper for xarray eco-system
 
 + [**PyLHD**](https://github.com/fujii-team/PyLHD)  
 A Python library for the LHD experiments
 (this is currently closed-source software).
 
-I have contributed to the following open source softwares.
-
-+ [**GPflow**](https://github.com/GPflow/GPflow)  
-Gaussian processes in TensorFlow
+I have been contributing to the following open source softwares continuously.
 
 + [**xarray**](https://github.com/pydata/xarray)  
 N-D labeled arrays and datasets in Python http://xarray.pydata.org
