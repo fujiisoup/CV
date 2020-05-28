@@ -13,7 +13,7 @@ def download_details(doi_list):
     for j, doi in enumerate(doi_list):
         doi = doi.strip()
         work = works.doi(doi)
-        details.append(work)
+        details.append(standarize(work))
     return details
 
 
@@ -25,11 +25,35 @@ def get_firstauthor(details):
     return firstauthors
 
 
+def standarize(detail):
+    if 'journal-issue' not in detail:
+        detail['journal-issue'] = {}
+    if 'published-print' not in detail['journal-issue']:
+        detail['journal-issue']['published-print'] = {}
+        detail['journal-issue']['published-print']['date-parts'] = detail['issued']['date-parts']
+    if len(detail['journal-issue']['published-print']['date-parts'][0]) < 2:
+        if isinstance(detail['journal-issue']['published-print']['date-parts'][0][0], list):
+            detail['journal-issue']['published-print']['date-parts'][0] = detail['journal-issue']['published-print']['date-parts'][0][0]
+        if len(detail['journal-issue']['published-print']['date-parts'][0]) == 1:
+            detail['journal-issue']['published-print']['date-parts'][0].append(0)  # month not available
+
+    if 'volume' not in detail:
+        print(detail)
+
+    for author in detail['author']:
+        if 'family' not in author:
+            author['family'] = author['name']
+        if 'given' not in author:
+            author['given'] = ''
+    return detail
+
+
 def sort_by_date(details, newest_first=True):
     dates = []
     for detail in details:
         y = detail['journal-issue']['published-print']['date-parts'][0][0]
         m = detail['journal-issue']['published-print']['date-parts'][0][1]
+            
         dates.append(int('{0:d}{1:02d}'.format(y, m)))
     idx = np.argsort(dates)
     if newest_first:
@@ -42,28 +66,23 @@ def save_markdown(details, outname):
     Save as a markdown format
     """
     details = sort_by_date(details)
-    saved_contents = [
-        'title', 'publisher', 
-        'author', 'journal-issue', 'article-number',
-        'short-container-title', 'container-title', 'volume',
-    ]
     lines = [
         "# List of published papers",
     ]
-    for detail in details:
-        lines.append('#### {}\n'.format(detail['title'][0]))
+    for i, detail in enumerate(details):
+        lines.append('{}. **{}**  '.format(i + 1, detail['title'][0]))
         authors = ''
         for author in detail['author']:
             if author['family'].lower() == 'fujii':
-                authors += '**{} {}**, '.format(author['given'], author['family'])
+                authors += '__**{} {}**__, '.format(author['given'], author['family'])
             else:
                 authors += '{} {}, '.format(author['given'], author['family'])
-        lines.append(' {}\n'.format(authors[:-2]))  # remove the last comma
+        lines.append(' {}  '.format(authors[:-2]))  # remove the last comma
         # journal
         articlenumber = detail.get('article-number', detail.get('page'))
-        lines.append(' *{}* **{},** {} ({})\n'.format(
+        lines.append(' *{}* **{},** {} ({})  \n'.format(
             detail['container-title'][0], 
-            detail['journal-issue']['issue'],
+            detail['volume'],
             articlenumber, 
             detail['journal-issue']['published-print']['date-parts'][0][0]
         ))
