@@ -21,8 +21,10 @@ Kyotodaigaku-katsura, Nishikyo-ku, Kyoto 615-8540
 +81-75-383-3647
 
 ### Research Summary
-I am interested in machine learning and Bayesian inference methods for big science, in particular plasma fusion experiment.
+
+I am interested in atomic physics, plasma physics, statistical physics as well as machine learning.
 I have been originally working with diagnostic instruments for plasma fusion study.
+One of my current projects are 
 One of my current objective is the accuracy improvement of scientific diagnostics, which is often suffered from complex noise, by machine learning and Bayesian inference.
 In my first attempt [K. Fujii 2016 RSI], I inferred systematic noise of instruments from experimental data.
 
@@ -38,7 +40,7 @@ found that this tails originate from the high temperature (a few keV) neutral hy
 + I have developed an inference model of neutral hydrogen density distribution in the core region of the high temperature plasma based on the spectral profile inversion.  
 [K.Fujii 2014 Nucl. Fusion]
 
-[**Full list of publications**](http://researchmap.jp/7000009196)
+[**Full list of publications**](data/papers.md)
 
 
 ### Recent talks
@@ -50,13 +52,13 @@ Fusion Data Processing, Validation and Analysis
 
 
 
-[**Full list of talks at international conferences**](talks.md)
+[**Full list of talks at international conferences**](data/internatinal_talks.md)
 
-[**Full list of talks at domestic conferences**](https://kyouindb.iimc.kyoto-u.ac.jp/e/hR3uG)
+[**Full list of talks at domestic conferences**](data/domestic_talks.md)
 
 
 ### Lectures
-I teach the following cources in Kyoto university.
+I teach the following courses in Kyoto university.
 
 + Practice of Basic Informatics (Faculty of Engineering)  
   The textbook for this lecture is in
@@ -75,6 +77,9 @@ A small Python library for reading Andor sif format.
 + [**xr-scipy**](https://github.com/fujiisoup/scipy)  
 Thin scipy wrapper for xarray eco-system
 
++ [**xr-fac**](https://github.com/fujiisoup/xr-fac)  
+A small library to load fac output files into xarray objects
+
 + [**PyLHD**](https://github.com/fujii-team/PyLHD)  
 A Python library for the LHD experiments
 (this is currently closed-source software).
@@ -83,3 +88,6 @@ I have been contributing to the following open source softwares continuously.
 
 + [**xarray**](https://github.com/pydata/xarray)  
 N-D labeled arrays and datasets in Python http://xarray.pydata.org
+
++ [**Flexible Atomic Code**](https://github.com/flexible-atomic-code/fac)  
+A software package for the calculation of various atomic processes.
