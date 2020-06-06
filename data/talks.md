@@ -1,9 +1,6 @@
 # 2017
 **oral**  
-Machine Learning of Noise in LHD Thomson Scattering System  
-[*2nd IAEA Technical Meeting on the
-Fusion Data Processing, Validation and Analysis
-(30 May - 2 June 2017 Boston, USA)*](https://nucleus.iaea.org/sites/fusionportal/Pages/2nd%20TM%20on%20Fusion%20Data%20processing/General-Information.aspx)
+[**](https://nucleus.iaea.org/sites/fusionportal/Pages/2nd%20TM%20on%20Fusion%20Data%20processing/General-Information.aspx)
 
 
 # 2016

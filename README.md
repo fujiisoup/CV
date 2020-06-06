@@ -23,33 +23,24 @@ Kyotodaigaku-katsura, Nishikyo-ku, Kyoto 615-8540
 ### Research Summary
 
 I am interested in atomic physics, plasma physics, statistical physics as well as machine learning.
-I have been originally working with diagnostic instruments for plasma fusion study.
-One of my current projects are 
-One of my current objective is the accuracy improvement of scientific diagnostics, which is often suffered from complex noise, by machine learning and Bayesian inference.
-In my first attempt [K. Fujii 2016 RSI], I inferred systematic noise of instruments from experimental data.
+Because of many-body interaction inside atoms or in plasmas, they show rich structures by themselves.
+My interest is on *statistically* modeling such complex phenomena.
 
-I have been previously working for spectroscopic diagnostics of the fusion plasma.
-My main contribution for the spectroscopic field is
-+ I found the far tails of the Balmer series spectrum in high temperature hydrogen plasma and
-found that this tails originate from the high temperature (a few keV) neutral hydrogen atoms.  
-[K.Fujii 2013 Phys. Plasmas]
+Followings are some selected works.
 
-+ I have developed a method to measure such far spectrum with dynamic range 10^6.  
-[K.Fujii 2013 Rev. Sci. Instrum]
++ I reported a simple explanation for a long standing question about the line intensity distribution from many-electron atoms.  
+[https://doi.org/10.1103/physrevlett.124.185002](K. Fujii PRL2020)
+
++ I showed a similar property in the $\gamma$-ray strength distribution from nuclear reaction, which has $10^8$ times higher energy scale than atoms.
+[https://arxiv.org/abs/2005.11844](arXiv:2005.11844)
+
++ I have developed a data-driven calibration method of Thomson-scattering system in fusion plasma experiments, where its non-linear signal processing principle results in heavily skewed noise distribution and makes it difficult to estimate the true values.  
+[K. Fujii RSI 2017]
 
 + I have developed an inference model of neutral hydrogen density distribution in the core region of the high temperature plasma based on the spectral profile inversion.  
-[K.Fujii 2014 Nucl. Fusion]
+[K.Fujii Nucl.Fusion 2014]
 
 [**Full list of publications**](data/papers.md)
-
-
-### Recent talks
-Machine Learning of Noise in LHD Thomson Scattering System
-
-[2nd IAEA Technical Meeting on the
-Fusion Data Processing, Validation and Analysis
-(30 May - 2 June 2017 Boston, USA)](https://nucleus.iaea.org/sites/fusionportal/Pages/2nd%20TM%20on%20Fusion%20Data%20processing/General-Information.aspx)
-
 
 
 [**Full list of talks at international conferences**](data/internatinal_talks.md)

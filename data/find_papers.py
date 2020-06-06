@@ -12,7 +12,10 @@ def download_details(doi_list):
     details = []
     for j, doi in enumerate(doi_list):
         doi = doi.strip()
+        if doi[0] == '#':
+            continue
         work = works.doi(doi)
+        work['doi'] = doi
         details.append(standarize(work))
     return details
 
@@ -37,8 +40,10 @@ def standarize(detail):
         if len(detail['journal-issue']['published-print']['date-parts'][0]) == 1:
             detail['journal-issue']['published-print']['date-parts'][0].append(0)  # month not available
 
-    if 'volume' not in detail:
-        print(detail)
+    if 'container-title' in detail:
+        if len(detail['container-title']) == 0:
+            print(detail['doi'])
+            print(detail)
 
     for author in detail['author']:
         if 'family' not in author:
@@ -74,17 +79,52 @@ def save_markdown(details, outname):
         authors = ''
         for author in detail['author']:
             if author['family'].lower() == 'fujii':
-                authors += '__**{} {}**__, '.format(author['given'], author['family'])
+                authors += '**<u>{} {}</u>**, '.format(author['given'], author['family'])
             else:
                 authors += '{} {}, '.format(author['given'], author['family'])
         lines.append(' {}  '.format(authors[:-2]))  # remove the last comma
         # journal
         articlenumber = detail.get('article-number', detail.get('page'))
-        lines.append(' *{}* **{},** {} ({})  \n'.format(
+        lines.append(' *{}* **{},** {} ({})  '.format(
             detail['container-title'][0], 
             detail['volume'],
             articlenumber, 
             detail['journal-issue']['published-print']['date-parts'][0][0]
+        ))
+        lines.append('<a href="https://doi.org/{0:s}">{0:s}</a>  \n'.format(detail['doi']))
+
+    with open(outname, 'w') as f:
+        for line in lines:
+            f.write(line + '\n')
+
+
+def save_cv1(details, outname):
+    """
+    者名，論文タイトル，著書名・学会誌・雑誌名等（著書の場合は出版社名も記載），巻号，頁，年月の順に記載してください。
+    
+    共著の場合は，本人の氏名を含め，著者全員の氏名を論文に記載された順に記入してください。本人の氏名にアンダーラインを付けてください。また本人が当該論文のCorresponding authorである場合は氏名の後に”*”を付けてください。（例．Hiroshima.T*）
+    """
+    details = sort_by_date(details, newest_first=False)
+    lines = [
+        "# List of published papers",
+    ]
+    for i, detail in enumerate(details):
+        authors = ''
+        for author in detail['author']:
+            if author['family'].lower() == 'fujii':
+                authors += '__**{} {}**__, '.format(author['given'], author['family'])
+            else:
+                authors += '{} {}, '.format(author['given'], author['family'])
+        lines.append('({})\n{}  '.format(i+1, authors[:-2]))  # remove the last comma
+        lines.append('**{}**  '.format(detail['title'][0]))
+        # journal
+        articlenumber = detail.get('article-number', detail.get('page'))
+        lines.append(' *{}* **{},** {} ({}.{})  \n'.format(
+            detail['container-title'][0], 
+            detail['volume'],
+            articlenumber, 
+            detail['journal-issue']['published-print']['date-parts'][0][0],
+            detail['journal-issue']['published-print']['date-parts'][0][1],
         ))
 
     with open(outname, 'w') as f:
@@ -100,3 +140,4 @@ if __name__ == '__main__':
         for detail in details:
             f.write('{}\n'.format(detail))
     save_markdown(details, 'papers.md')
+    save_cv1(details, 'private_papers.md')
