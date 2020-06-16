@@ -23,22 +23,37 @@ Kyotodaigaku-katsura, Nishikyo-ku, Kyoto 615-8540
 ### Research Summary
 
 I am interested in atomic physics, plasma physics, statistical physics as well as machine learning.
-Because of many-body interaction inside atoms or in plasmas, they show rich structures by themselves.
+Many-body interactions inside atoms and in plasmas, these systems show rich structures by themselves.
 My interest is on *statistically* modeling such complex phenomena.
 
-Followings are some selected works.
+#### Statistical modeling of quantum structure of many-electron-atoms and heavy nucleus
 
-+ I reported a simple explanation for a long standing question about the line intensity distribution from many-electron atoms.  
+<img src="figs/nuclei_atom.png" alt="atoms_nucleus" width="200"/>
+
+I reported a simple explanation for a long standing question about the line intensity distribution from many-electron atoms.  
+
+<img src="figs/thorium.png" alt="atoms_nucleus" width="400"/>
+
 [https://doi.org/10.1103/physrevlett.124.185002](K. Fujii PRL2020)
 
-+ I showed a similar property in the $\gamma$-ray strength distribution from nuclear reaction, which has $10^8$ times higher energy scale than atoms.
+I also found the similar phenomena in nuclear emission ($\gamma$-decay spectrum).
+The intensity statistics of $\gamma$-decay spectrum becomes also a power-law but with a specific power-law-index of 1, regardless of the reaction kind or neuclei.
+
+<img src="figs/gamma_decay.png" alt="atoms_nucleus" width="200"/>
+
 [https://arxiv.org/abs/2005.11844](arXiv:2005.11844)
 
-+ I have developed a data-driven calibration method of Thomson-scattering system in fusion plasma experiments, where its non-linear signal processing principle results in heavily skewed noise distribution and makes it difficult to estimate the true values.  
+
+#### Statistical method to improve fusion plasma experiment 
+
+I have developed a data-driven calibration method of Thomson-scattering system in fusion plasma experiments, where its non-linear signal processing principle results in heavily skewed noise distribution and makes it difficult to estimate the true values.  
 [K. Fujii RSI 2017]
 
-+ I have developed an inference model of neutral hydrogen density distribution in the core region of the high temperature plasma based on the spectral profile inversion.  
+Also, I have developed an inference model of neutral hydrogen density distribution in the core region of the high temperature plasma based on the spectral profile inversion.  
+Furthermore, we found that the neutral hydrogen density distribution in the core plasma can be understood from thermo-mechanical view point; the pressure of atoms is almost constant over the core to edge region, while the huge temperature difference makes the density difference.  
 [K.Fujii Nucl.Fusion 2014]
+
+
 
 [**Full list of publications**](data/papers.md)
 
