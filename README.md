@@ -1,6 +1,6 @@
 # Keisuke Fujii
 
-<img src='figs/face_maldives.jpg' width=240pt>
+<img src='figs/face_maldives.jpg' width=120pt>
 
 [Japanese version](jp/CV.md)
 
@@ -11,7 +11,7 @@ Kyoto University, Kyoto
 
 PhD of engineering (Kyoto university)
 
-[**Full list of my experience**](work_education.md)
+[**Full list of my experience**](data/work_education.md)
 
 ### Address
 Room b4N02, C3 Bldg.
