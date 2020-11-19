@@ -133,7 +133,7 @@ def save_cv1(details, outname):
 
 
 if __name__ == '__main__':
-    with open('_papers.csv', 'r') as f:
+    with open('papers.csv', 'r') as f:
         doi_list = f.readlines()
     details = download_details(doi_list)
     with open('dois.txt', 'w') as f:
